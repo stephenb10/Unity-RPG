@@ -1,0 +1,25 @@
+{
+    "QuestDatabase": [
+        {
+            "questID": 0,
+            "questName": "Quest0",
+            "questDescription": "",
+            "objectives": [],
+            "completed": false
+        },
+        {
+            "questID": 1,
+            "questName": "Quest1",
+            "questDescription": "",
+            "objectives": [],
+            "completed": false
+        },
+        {
+            "questID": 2,
+            "questName": "Quest2",
+            "questDescription": "",
+            "objectives": [],
+            "completed": false
+        }
+    ]
+}
