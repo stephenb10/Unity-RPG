@@ -34,6 +34,23 @@ public class DataManager : MonoBehaviour
         File.WriteAllText(Application.dataPath + dataFolder + questFile, json);
     }
 
+    // STATIC function to load quests from a JSON file
+    // RETURNS - An array of quests 
+    public static Quest[] loadQuests()
+    {
+        Quest[] quests;
+
+        string json = JsonHelperN.getJSONstringFromFile(dataFolder, questFile, "Quests");
+        quests = JsonHelperN.FromJson<Quest>(json);
+
+        //quests = JsonConvert.DeserializeObject<Quest[]>(json);
+
+        return quests;
+
+    }
+
+
+
     // STATIC function to save quest database to a JSON file
     // PARAMS - quests, list of quests parsed from the quest manager
     public static void saveQuestDatabase(List<Quest> quests)
@@ -41,7 +58,7 @@ public class DataManager : MonoBehaviour
         string json = JsonHelperN.ToJson<Quest>(quests.ToArray(), true);
         //string json = JsonConvert.SerializeObject(quests);
         json = JsonHelperN.replaceInJSONString(json, "QuestDatabase");
-        File.WriteAllText(Application.dataPath + dataFolder + questFile, json);
+        File.WriteAllText(Application.dataPath + dataFolder + questDatabaseFile, json);
     }
 
     // STATIC function to load the quest database from a JSON file
@@ -59,19 +76,7 @@ public class DataManager : MonoBehaviour
 
     }
 
-    // STATIC function to load quests from a JSON file
-    // RETURNS - An array of quests
-    public static Quest[] loadQuests(){
-        Quest[] quests;
-        
-        string json = JsonHelperN.getJSONstringFromFile (dataFolder, questDatabaseFile, "Quests");
-        quests = JsonHelperN.FromJson<Quest>(json);
-                
-        //quests = JsonConvert.DeserializeObject<Quest[]>(json);
-        
-        return quests;
-
-    }
+   
 
 }
 

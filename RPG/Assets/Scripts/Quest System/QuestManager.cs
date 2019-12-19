@@ -45,10 +45,11 @@ public class QuestManager : MonoBehaviour
         Quest[] loadedQuests = DataManager.loadQuests();
         foreach (Quest q in loadedQuests)
         {
-            Quest qDB = QuestFromID(q.questID);
-            qDB.completed = q.completed;
+            // 
+            //Quest qDB = QuestFromID(q.questID);
+            //qDB.completed = q.completed;
 
-            quests.Add(qDB);
+            quests.Add(q);
 
         }
         

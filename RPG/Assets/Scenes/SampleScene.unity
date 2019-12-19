@@ -395,22 +395,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questDatabase: {fileID: 11400000, guid: e0f29f94ca5b7491ab56d277dd001bf4, type: 2}
-  quests:
-  - questID: 1
-    questName: 
-    questDescription: 
-    objectives:
-    - objectiveName: Get sword
-      description: 
-      objectiveType: 
-      completed: 0
-    completed: 0
-  - questID: 1
-    questName: Another quest
-    questDescription: 'testing '
-    objectives:
-    - objectiveName: Get sword
-      description: 
-      objectiveType: 
-      completed: 0
-    completed: 1
+  quests: []
